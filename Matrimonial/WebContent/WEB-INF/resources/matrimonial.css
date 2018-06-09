@@ -1,0 +1,5 @@
+@CHARSET "ISO-8859-1";
+.hero-image{
+	 width: -webkit-fill-available;
+    height: fit-content;
+}
