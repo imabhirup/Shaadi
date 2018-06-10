@@ -1,5 +1,7 @@
 package com.matrimonial.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -14,10 +16,21 @@ public class HomePageController {
 	@RequestMapping("/homepage")
 	protected ModelAndView returnHomepage(HttpServletRequest request,
 		HttpServletResponse response) throws Exception {
- 
-		ModelAndView modelandview = new ModelAndView("HomePage");
-		modelandview.addObject("welcomeMessage", "Hi User, welcome to the first Spring MVC Application");
 		
+		ArrayList<String> profile=new ArrayList<>();
+		profile.add("Self");
+		profile.add("Son");
+		profile.add("Daughter");
+		profile.add("Brother");
+		profile.add("Sister");
+		profile.add("Friend");
+		profile.add("Relative");
+		ArrayList<String> gender=new ArrayList<>();
+		gender.add("Male");
+		gender.add("Female");
+		ModelAndView modelandview = new ModelAndView("HomePage");
+		modelandview.addObject("profile", profile);
+		modelandview.addObject("gender", gender);
 		return modelandview;
 	}
 }
