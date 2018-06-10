@@ -9,7 +9,7 @@
 	href="https://bootswatch.com/4/sandstone/bootstrap.min.css">
 	
 <link rel="stylesheet"
-	href="https://bootswatch.com/4/sandstone/bootstrap.css">
+	href="<c:url value="resources/bootstrap.css"/>"/>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script

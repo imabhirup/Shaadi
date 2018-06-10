@@ -3,3 +3,8 @@
 	 width: -webkit-fill-available;
     height: fit-content;
 }
+
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
