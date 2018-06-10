@@ -10,6 +10,13 @@
 </head>
 <body>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+<c:if test="${registration eq 'done'}">
+<div class="reg alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>You have registered successfully.</strong> Please  <a data-toggle="modal"
+					href="#logInModal" class="alert-link">Log In.</a>.
+</div>
+</c:if>
 <jsp:include page="header.jsp"></jsp:include>
 <div>
  
@@ -21,7 +28,18 @@
 <button type="submit" class="btn btn-primary">Search</button>
 
 </form>
+
+
+
+
+
 </div>
 
 </body>
+
+<script type="text/javascript">
+function test(){
+    alert();
+}
+</script>
 </html>

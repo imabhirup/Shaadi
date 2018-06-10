@@ -12,7 +12,7 @@
 <body>
 	<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 	<form:form action="${contextPath}/register"
-		modelAttribute="registerForm" method="post">
+		modelAttribute="registrationForm" method="post">
 		<div id="registerInModal" class="modal">
 
 			<div class="modal-dialog">
@@ -40,31 +40,30 @@
 								share your email with anyone else.</small>
 						</div>
 						<div class="form-group">
-						<label for="exampleInputPassword1">Create a password</label> <input
+						<label for="exampleInputPassword1">Create a password</label> <form:input path="password"
 							type="password" class="form-control" id="exampleInputPassword1"
-							placeholder="Password">
+							placeholder="Password"/>
 						</div>
 						<div class="form-group">
-							<label for="exampleSelect1">Create Profile For</label> <select
-								class="form-control" id="exampleSelect1">
+							<label for="exampleSelect1">Create Profile For</label> 
+							
+							<form:select
+								class="form-control" id="exampleSelect1" path="profile">
 								<c:forEach items="${profile}" var="profile">
-									<option value="${profile}">${profile}</option>
+									<form:option value="${profile}">${profile}</form:option>
 								</c:forEach>
-							</select>
+							</form:select>
 						</div>
 						
-                    <c:forEach items="${gender}" var="gender">
                     
-                        <input type="radio" name="gender"  value="${gender}" checked="">
-                        ${gender}
+                       <form:radiobuttons path="gender" items="${gender}" />
                       
-                    </c:forEach>
                     
 					</div>
 
 					<!-- Modal footer -->
 					<div class="modal-footer">
-					<button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#registerInModalTwo">Next</button>
+					<button id="currentModal" type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#registerInModalTwo">Next</button>
 						<!-- <button type="submit" class="btn btn-primary">Sign Up</button>
 						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
 					</div>
@@ -108,7 +107,7 @@
 
 					<!-- Modal footer -->
 					<div class="modal-footer">
-					<button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#next">Next</button>
+					<button type="submit" class="btn btn-outline-info" data-toggle="modal">Sign Up</button>
 						<!-- <button type="submit" class="btn btn-primary">Sign Up</button>
 						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
 					</div>
@@ -127,7 +126,7 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-$( "#registerInModal" ).click(function() {
+$( "#currentModal" ).click(function() {
 	 $("#registerInModal .close").click();
 	});
 });
