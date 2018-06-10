@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+	<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 	<form:form action="${contextPath}/register"
 		modelAttribute="registerForm" method="post">
 		<div id="registerInModal" class="modal">
@@ -37,21 +37,43 @@
 								id="emailHelp" class="form-text text-muted">We'll never
 								share your email with anyone else.</small>
 						</div>
+						<div class="form-group">
 						<label for="exampleInputPassword1">Create a password</label> <input
 							type="password" class="form-control" id="exampleInputPassword1"
 							placeholder="Password">
+						</div>
+						<div class="form-group">
+							<label for="exampleSelect1">Create Profile For</label> <select
+								class="form-control" id="exampleSelect1">
+								<c:forEach items="${profile}" var="profile">
+									<option value="${profile}">${profile}</option>
+								</c:forEach>
+							</select>
+						</div>
+						
+                    <c:forEach items="${gender}" var="gender">
+                    
+                        <input type="radio" name="gender"  value="${gender}" checked="">
+                        ${gender}
+                      
+                    </c:forEach>
+                    
 					</div>
 
 					<!-- Modal footer -->
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary">Sign Up</button>
-						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#next">Next</button>
+						<!-- <button type="submit" class="btn btn-primary">Sign Up</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
 					</div>
 
 				</div>
 			</div>
 
 		</div>
+		
+		
+		
 
 	</form:form>
 </body>
