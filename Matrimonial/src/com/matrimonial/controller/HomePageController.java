@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.matrimonial.formObject.LoginForm;
+
 @Controller
 public class HomePageController {
 
@@ -31,6 +33,7 @@ public class HomePageController {
 		ModelAndView modelandview = new ModelAndView("HomePage");
 		modelandview.addObject("profile", profile);
 		modelandview.addObject("gender", gender);
+		modelandview.addObject("loginForm",new LoginForm());
 		return modelandview;
 	}
 }
