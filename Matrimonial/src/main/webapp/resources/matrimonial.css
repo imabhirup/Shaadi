@@ -1,0 +1,118 @@
+@CHARSET "ISO-8859-1";
+.hero-image{
+	 width: -webkit-fill-available;
+    height: fit-content;
+}
+
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
+
+.displayIn{
+	    display: -webkit-inline-box;
+}
+
+.matriRegister{
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+
+.reg{
+	margin-bottom: 0px !important;
+}
+
+body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  }
+  .heading{
+    font-weight: 300;
+  }
+  .blue-text{
+   color: cornflowerblue;
+  }
+  .heading-big{
+    font-size: 5rem;
+    }
+  .brand{
+        color: #4CAF50;
+  }
+  p{
+    font-size: 2rem;
+        font-weight: 300;
+  }
+  .home{
+    color:aliceblue;
+    background-color: #333;
+    background-image: url("background1.jpg");
+    min-height: 100vh;
+  }
+  .cover{
+    padding-top: 5%;
+  }
+  .btn-lg{
+    padding: .75rem 1.25rem;
+    font-weight: 700;
+    color: #4CAF50;
+    text-shadow: none;
+    background-color: #ddd;
+    border: .2rem solid #4CAF50;
+    opacity: 0.9;
+  }
+  .search{
+    /* background-color: #9ba59f; */
+    background: rgba(0,0,0,0.5);
+    margin: 10% 10% 10% 10%;
+    padding: 10% 10% 10% 10%;
+    min-height:80vh;
+    border-radius: 6%;
+    opacity: 0.9;
+  }
+  .about{
+    min-height: 50vh;
+  }
+  .testimonials{
+    background-color: #e6f7f0;
+    min-height: 33vh;
+    padding-top: 7%;
+  }
+  #reviewer{
+    font-size: 3rem;
+  }
+  .footer{
+    background-color: #ededed;
+    padding-top: 1.5%;
+  }
+  .secondary-footer{
+    background-color: #333;
+    color: #9ba59f;
+    padding: .5% 0% .5% 0%;
+  }
+  .fas{
+    line-height: 5;
+    color: #4CAF50;
+  }
+  .fab{
+    color:#fff;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  ul {
+  list-style-type: none;
+}
+.brand-footer{
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.alert {
+    margin-bottom: 0px;
+}
+
